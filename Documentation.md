@@ -29,11 +29,10 @@ William Shockley had a pretty good way of describing an amplifier:
 
 _"If you take a bale of hay and tie it to the tail of a mule and then strike a match and set the bale of hay on fire, and if you then compare the energy expended shortly thereafter by the mule with the energy expended by yourself in the striking of the match, you will understand the concept of amplification._
 
-boosts an electric current
 
-What is the gain and why do I need it?
-The gain of an amplifier Verhältnis zwischen Output und Input Signal --> called Gain
-An amplifier that doubles the size of the original signal has a gain of 2. In terms of Audio this gain is also expressed in decibels.
+__What is the gain and why do I need it?__
+
+The gain of an amplifier Verhältnis zwischen Output und Input Signal --> called Gain. An amplifier that doubles the size of the original signal has a gain of 2. In terms of Audio this gain is also expressed in decibels.
 The ‘max gain’ of the MAX9814 is 60dB.
 
 __const int__ // Konstante
@@ -43,13 +42,12 @@ __unsigend int__ // vorzeichenlose Ganzezahlen
 
 __long__ // save 32 bits
 
-What did we learn about Analog Inputs:
-
-compared to the digital Input analog inputs are not just LOW and HIGH. An Analog input measures a range of voltage levels.
+What we learned about Analog Inputs: Compared to the digital Input analog inputs are not just LOW and HIGH. An Analog input measures a range of voltage levels.
 _"They are analogous to some other property"_
 
 ![Pressure](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia1.tenor.com%2Fimages%2Ff0e4350c6d65022806875f51100754ae%2Ftenor.gif%3Fitemid%3D3715232&f=1&nofb=1)
 
+!!Dont read more than 5 voltage!!
 
 #### Circut Diagram for the amplifier
 
@@ -137,3 +135,15 @@ After I fried my USB Port a week ago, I decided to not __just__ try it out witho
 - ~ 3.5 Amps per meter or 60 LEDs
 
 As my USB 2.0 port can only provide a max of 0.5 Amps I will need an external power supply. Yikes.
+
+#### External Power supply
+
+Options: Lipo battery, Plug;
+
+I found this plug with an output of 5 Voltage and 2 amps. My strip will need 5V and 3.5 amps. Guess I just try it out and see if that is enough current.
+
+![Plug](https://raw.githubusercontent.com/TTropschuh/waves/master/photo_2019-10-23_14-19-25.jpg)
+
+I simply connected positive and negativ to the LED strip. But nothing happend. This means I need more amps, I guess?
+No, I am wrong. At the Adafruit site they used the same thing to get light a stip this size.
+My next guess would be that I need the DigitalPin to light the strip. Still
