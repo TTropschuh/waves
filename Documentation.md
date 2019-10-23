@@ -5,8 +5,7 @@ Make the invisible, visible.
 ## Midterm Project 2019
 New York City is from a sensual perspective overwhelming. Everywhere we are perceiving something. We see adds, people crossing our way and smell the city in sometimes a good but mostly in a bad way. In this project I want to focus on humans’ sensual experiences that are not visible and hard to grasp. To narrow this a little bit down I set myself the topic “Pollution” which is and will always be in a city like New York a hot topic. The main aim in this midterm project is to make the data perceivable in an optical way. The collected data should not get dusty in an exel sheet but rather be caught in its context: The streets of New York.  
 
-# Focus Point
-## __Wave Pollution in urban spaces__
+# Wave Pollution in urban spaces
 
 ![Tadeus](https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fdata.whicdn.com%2Fimages%2F33678463%2Flarge.gif&f=1&nofb=1)
 
@@ -20,10 +19,41 @@ New York City is from a sensual perspective overwhelming. Everywhere we are perc
 
 ### Step one: Get the sound values.
 
+So what does this amplifier do? Well, basically nothing more than this.
+
+![amplifier_old_fashion](https://cdn4.explainthatstuff.com/ear-trumpet-amplifiers.jpg)
+
+source: https://www.explainthatstuff.com/amplifiers.html
+
+William Shockley had a pretty good way of describing an amplifier:
+
+_"If you take a bale of hay and tie it to the tail of a mule and then strike a match and set the bale of hay on fire, and if you then compare the energy expended shortly thereafter by the mule with the energy expended by yourself in the striking of the match, you will understand the concept of amplification._
+
+boosts an electric current
+
+What is the gain and why do I need it?
+The gain of an amplifier Verhältnis zwischen Output und Input Signal --> called Gain
+An amplifier that doubles the size of the original signal has a gain of 2. In terms of Audio this gain is also expressed in decibels.
+The ‘max gain’ of the MAX9814 is 60dB.
+
+__const int__ // Konstante
+const stand for constant. Pi could be used there.
+
+__unsigend int__ // vorzeichenlose Ganzezahlen
+
+__long__ // save 32 bits
+
+What did we learn about Analog Inputs:
+
+compared to the digital Input analog inputs are not just LOW and HIGH. An Analog input measures a range of voltage levels.
+_"They are analogous to some other property"_
+
+![Pressure](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia1.tenor.com%2Fimages%2Ff0e4350c6d65022806875f51100754ae%2Ftenor.gif%3Fitemid%3D3715232&f=1&nofb=1)
+
+
 #### Circut Diagram for the amplifier
 
 ![](https://raw.githubusercontent.com/TTropschuh/waves/master/Amplifier_Circuit.PNG)
-
 
 #### Code
 
@@ -92,6 +122,7 @@ void loop()
 ```
 
 ![Test_amplifier](https://raw.githubusercontent.com/TTropschuh/waves/master/TEST1_amplifier.gif)
+
 Well, that was easy.
 
 ### Make the LED Stipe blink
@@ -105,4 +136,4 @@ After I fried my USB Port a week ago, I decided to not __just__ try it out witho
 - 18 Watts per meter or 60 LEDs
 - ~ 3.5 Amps per meter or 60 LEDs
 
-As my USB 2.0 port can only provide a max of 0.5 Amps I will need an external power supply.
+As my USB 2.0 port can only provide a max of 0.5 Amps I will need an external power supply. Yikes.
