@@ -144,6 +144,11 @@ I found this plug with an output of 5 Voltage and 2 amps. My strip will need 5V 
 
 ![Plug](https://raw.githubusercontent.com/TTropschuh/waves/master/photo_2019-10-23_14-19-25.jpg)
 
-I simply connected positive and negativ to the LED strip. But nothing happend. This means I need more amps, I guess?
+I simply connected positive and negativ to the LED strip and DI and CI to the digital Pins 3 and 13. But nothing happend. This means I need more amps, I guess?
 No, I am wrong. At the Adafruit site they used the same thing to get light a stip this size.
-My next guess would be that I need the DigitalPin to light the strip. Still
+
+![two_hours_later](https://i.ytimg.com/vi/MayqOgrHo9I/maxresdefault.jpg)
+
+WOW! Turned out that the power supply is broken. I simply conncted the LED strip to the arduino without any external power supply. Pour build in DC regulator... Another "problem" with this solution is that I wont be able to get the maximum of brightness out of the LEDs. But for now it works.
+
+![two_hours_later](https://raw.githubusercontent.com/TTropschuh/waves/master/IMG_7552.gif)
