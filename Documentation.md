@@ -202,6 +202,9 @@ void setup() {
 
 ### Step four: Use Microphone to controll the LED strip.
 
+![final_circut](https://raw.githubusercontent.com/TTropschuh/waves/master/final_circut.PNG)
+
+
 WTF is happening?
 
 ![trouble_uploading](https://raw.githubusercontent.com/TTropschuh/waves/master/trouble_shooting_upload.PNG)
