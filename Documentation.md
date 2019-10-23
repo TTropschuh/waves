@@ -5,12 +5,14 @@ Make the invisible, visible.
 ## Midterm Project 2019
 New York City is from a sensual perspective overwhelming. Everywhere we are perceiving something. We see adds, people crossing our way and smell the city in sometimes a good but mostly in a bad way. In this project I want to focus on humans’ sensual experiences that are not visible and hard to grasp. To narrow this a little bit down I set myself the topic “Pollution” which is and will always be in a city like New York a hot topic. The main aim in this midterm project is to make the data perceivable in an optical way. The collected data should not get dusty in an exel sheet but rather be caught in its context: The streets of New York.  
 
+![immaterials](http://www.elasticspace.com/wp-content/uploads/2013/03/Immaterials-Wifi-21.jpg)
+
 # Wave Pollution in urban spaces
 
 ![Tadeus](https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fdata.whicdn.com%2Fimages%2F33678463%2Flarge.gif&f=1&nofb=1)
 
 ### Components
-1. AGC Electret Microphone Amplifier - MAX9814
+1. AGC Electret Microphone Amplifier - MAX9814 [Data sheet](https://cdn-shop.adafruit.com/datasheets/MAX9814.pdf)
 2. Arduino Uno
 3. LED Stripe
 4. Resistors
@@ -62,10 +64,6 @@ First question: How do I get the sound value in the serial monitor? Lucky me som
 
 
 ```java
-/****************************************
-Example Sound Level Sketch for the
-Adafruit Microphone Amplifier
-****************************************/
 
 const int sampleWindow = 50; // Sample window width in mS (50 mS = 20Hz)
 unsigned int sample;
@@ -214,3 +212,11 @@ Helpful links:
 https://f00l.de/blog/programmable-rgb-led-strip-microphone/
 
 https://github.com/FastLED/FastLED/wiki/Basic-usage
+
+https://learn.adafruit.com/digital-led-strip/code
+
+https://www.adafruit.com/product/1461?length=1
+
+https://www.electronics-tutorials.ws/filter/filter_7.html
+
+https://learn.adafruit.com/adafruit-microphone-amplifier-breakout/assembly-and-wiring
