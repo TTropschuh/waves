@@ -123,7 +123,7 @@ void loop()
 
 Well, that was easy.
 
-### Make the LED Stipe blink
+### Step two: Make the LED Stipe blink
 
 I will use a LED Stripe from [Adafruit](https://www.adafruit.com/product/1461?length=1). They have a collection of funky and diverse of LEDs named NeoPixels. They are overpriced, I know. But!.. I already bought this a few months ago. Any other LED stripe could do the same job, I guess.
 
@@ -149,6 +149,65 @@ No, I am wrong. At the Adafruit site they used the same thing to get light a sti
 
 ![two_hours_later](https://i.ytimg.com/vi/MayqOgrHo9I/maxresdefault.jpg)
 
-WOW! Turned out that the power supply is broken. I simply conncted the LED strip to the arduino without any external power supply. Pour build in DC regulator... Another "problem" with this solution is that I wont be able to get the maximum of brightness out of the LEDs. But for now it works.
+WOW! Turned out that the power supply is broken. I simply connected the LED strip to the arduino without any external power supply. Poor build-in DC regulator... Another "problem" with this solution is that I won't be able to get the maximum of brightness out of the LEDs. But for now it works.
 
-![two_hours_later](https://raw.githubusercontent.com/TTropschuh/waves/master/IMG_7552.gif)
+I also found out that these are not Neopixels. Neopixels have only 3 Pins (5V, GND, DIN). The LEDs I am using are called Apa102 LEDs and have 4 pins (5V, GND, CI, DI).
+
+![](https://raw.githubusercontent.com/TTropschuh/waves/master/IMG_7552.gif)
+
+
+
+### Step three: Use Analog INput to controll Digital OUTput.
+
+Here I used a potentiometer to control the LED strip. Therefore I had to map the values from the potentiometer on the LED number.
+
+![poti_input](https://raw.githubusercontent.com/TTropschuh/waves/master/poti_input.gif)
+```java
+//Library
+#include <FastLED.h>
+
+// Variables
+#define NUM_LEDS 60
+#define DATA_PIN 3
+#define CLOCK_PIN 13
+
+
+// Define an array of leds
+CRGB leds[NUM_LEDS];
+
+void setup() {
+//Defines what kind of LEDs are on the strip and the pins
+  FastLED.addLeds<APA102, DATA_PIN, CLOCK_PIN, RGB>(leds, NUM_LEDS);
+
+}
+
+
+    void loop() {
+      // Read from Pin A2
+        int val = analogRead(A2);
+        // Map the values from the potentiometer with the number of the LEDs on the strip.
+        int numLedsToLight = map(val, 0, 1023, 0, NUM_LEDS);
+
+        // First, clear the existing led values
+
+        FastLED.clear();
+        // for loop to add or remove leds depending on the potentiometer value
+        for(int led = 0; led < numLedsToLight; led++) {
+            leds[led] = CRGB::Blue;
+        }
+        FastLED.show();
+    }
+
+```
+
+### Step four: Use Microphone to controll the LED strip.
+
+WTF is happening?
+
+![trouble_uploading](https://raw.githubusercontent.com/TTropschuh/waves/master/trouble_shooting_upload.PNG)
+
+Helpful links:
+
+https://f00l.de/blog/programmable-rgb-led-strip-microphone/
+
+https://github.com/FastLED/FastLED/wiki/Basic-usage
