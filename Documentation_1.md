@@ -2,7 +2,7 @@
 Make the invisible, visible.
 #### Pyhsical Prototyping with Phillip Stearns @ Parsons
 
-## Midterm Project 2019
+## Midterm/FINAL Project 2019
 New York City is from a sensual perspective overwhelming. Everywhere we are perceiving something. We see adds, people crossing our way and smell the city in sometimes a good but mostly in a bad way. In this project I want to focus on humans’ sensual experiences that are not visible and hard to grasp. To narrow this a little bit down I set myself the topic “Pollution” which is and will always be in a city like New York a hot topic. The main aim in this midterm project is to make the data perceivable in an optical way. The collected data should not get dusty in an exel sheet but rather be caught in its context: The streets of New York.  
 
 ![immaterials](http://www.elasticspace.com/wp-content/uploads/2013/03/Immaterials-Wifi-21.jpg)
