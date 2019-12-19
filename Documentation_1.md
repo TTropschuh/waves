@@ -209,7 +209,6 @@ WTF is happening?
 
 ![trouble_uploading](https://raw.githubusercontent.com/TTropschuh/waves/master/trouble_shooting_upload.PNG)
 
-## Final Project 2019
 
 ### Step five: Make Button Input for the LED Strip
 
